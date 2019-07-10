@@ -10,10 +10,25 @@ namespace OOP01
     {
         public static void Main()
         {
-            // object from Point class
-            Point p = new Point(5, 0);
-            p.SetX(0);
-            Console.WriteLine(p.GetX());
+            Queue q1 = new Queue();
+            Queue q2 = new Queue(3);
+
+            int i = 1;
+            while (q2.Push(i))
+            {
+                i++;
+            }
+            q2.SetSize(7);
+            q2.Push(17);
+            q2.Push(20);
+            q2.Push(24);
+            q2.Push(222);
+
+            int no;
+            while (q2.Pop(out no))
+            {
+                Console.WriteLine(no);
+            }
             Console.ReadLine();
         }
     }
